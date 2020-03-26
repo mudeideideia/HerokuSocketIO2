@@ -1,7 +1,6 @@
-let socket = io();
-let el;
+const socket = io();
+const el = document.getElementById('server-time');
 
 socket.on('time', (timeString) => {
-  el = document.getElementById('server-time');
   el.innerHTML = 'Server time: ' + timeString;
 });
